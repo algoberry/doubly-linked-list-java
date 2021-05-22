@@ -65,9 +65,9 @@ public class DoublyLinkedList {
         	System.out.print("Enter the "+count+" element value:"); 
         	DLLCompute.add(scan.nextInt());
         }
-        System.out.print("Show data;s from Head Postition:");
+        System.out.print("Show data's from Head Postition:");
         DLLCompute.displayFromHead();
-        System.out.print("Show data;s from Tail Postition:");
+        System.out.print("Show data's from Tail Postition:");
         DLLCompute.displayFromTail();
 	}
 }
