@@ -57,17 +57,19 @@ class DLLCompute {
 
 public class DoublyLinkedList {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the number of elements to insert:");
-        int numberOfElements = scan.nextInt();
-        int count = 1;
-        for(;count<=numberOfElements;count++) {
-        	System.out.print("Enter the "+count+" element value:"); 
-        	DLLCompute.add(scan.nextInt());
-        }
-        System.out.print("Show data's from Head Postition:");
-        DLLCompute.displayFromHead();
-        System.out.print("Show data's from Tail Postition:");
-        DLLCompute.displayFromTail();
+		try(Scanner scan = new Scanner(System.in)) {
+			System.out.print("Enter the number of elements to insert:");
+			int numberOfElements = scan.nextInt();
+			int count = 1;
+			for(;count<=numberOfElements;count++) {
+				System.out.print("Enter the "+count+" element value:"); 
+				DLLCompute.add(scan.nextInt());
+			}
+			scan.close();
+		}
+		System.out.print("Show data's from Head Postition:");
+		DLLCompute.displayFromHead();
+		System.out.print("Show data's from Tail Postition:");
+		DLLCompute.displayFromTail();
 	}
 }
